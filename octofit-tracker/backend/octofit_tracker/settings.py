@@ -94,6 +94,15 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = ['*']
 CORS_ALLOW_METHODS = ['*']
 
+# Ensure unique index on email for User collection (for MongoDB)
+import django
+from django.apps import apps
+from django.conf import settings as dj_settings
+if apps.ready and 'octofit_tracker' in dj_settings.INSTALLED_APPS:
+    from djongo import connection
+    db = connection.cursor().db_conn.client['octofit_db']
+    db.users.create_index('email', unique=True)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
