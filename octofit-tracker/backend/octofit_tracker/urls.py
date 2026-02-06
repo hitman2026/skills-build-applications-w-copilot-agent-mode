@@ -38,11 +38,11 @@ def api_root(request, format=None):
     else:
         base_url = request.build_absolute_uri('/api/')
     return Response({
-        'users': base_url + 'users/',
-        'teams': base_url + 'teams/',
-        'activities': base_url + 'activities/',
-        'leaderboard': base_url + 'leaderboard/',
-        'workouts': base_url + 'workouts/',
+        'users': f"{base_url}users/",
+        'teams': f"{base_url}teams/",
+        'activities': f"{base_url}activities/",
+        'leaderboard': f"{base_url}leaderboard/",
+        'workouts': f"{base_url}workouts/",
     })
 
 urlpatterns = [
