@@ -1,0 +1,51 @@
+.App {
+  text-align: center;
+body {
+  background-color: #f8f9fa;
+}
+
+.App-header {
+  padding: 2rem 0;
+  background: linear-gradient(90deg, #007bff 0%, #6c757d 100%);
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 900px;
+}
+
+.card {
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.table th, .table td {
+  vertical-align: middle;
+}
+
+.table-dark th {
+  background-color: #343a40 !important;
+  color: #fff !important;
+}
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
